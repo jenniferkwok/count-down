@@ -8,11 +8,15 @@
 				deadline: 'January 1, 2019'
 			}
 		}
+
+		changeDeadline(){
+			this.setState({deadline: 'April 10, 2020'})
+		}
 		render() {
 			return(
 			<div className="App">
 				<div className="App-title">
-				CoundDown to {this.state.deadline}!</div>
+				Count down to {this.state.deadline}!</div>
 				<div>
 					<div className="Clock-days">14 days</div>
 					<div className="Clock-hours">20 hours</div>
@@ -21,7 +25,7 @@
 				</div>
 				<div>
 				<input placeholder='new date'/>
-				<button>Submit</button>
+				<button onClick={() => this.changeDeadline()}>Submit</button>
 				</div>
 			</div>
 				)
