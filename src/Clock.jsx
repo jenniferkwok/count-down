@@ -21,6 +21,7 @@ componentDidMount(){
   setInterval(()=> this.getTimeUntil(this.props.deadline))
 }
 
+
   getTimeUntil(deadline) {
     const time = Date.parse(deadline) - Date.parse(new Date());
     // console.log('time', time);
